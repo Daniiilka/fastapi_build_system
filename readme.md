@@ -12,13 +12,13 @@ bash setup.sh
 
 ## Usage
 
-You can run FastAPI app manually by this command:
+You can run FastAPI app manually by this command, It will start the application on the 5000 port:
 ```bash
-cd {PATH TO THE PROJECT}
 # startapp
 bash start.sh
 ```
-You can send post request to the API with the template below with the actual build name instead of example data "any_build_name":
+
+You can send post request to /get_tasks route of the API with the template below with the actual build name instead of example data "any_build_name":
 ```json
 {
     "build": "any_build_name"
@@ -28,6 +28,5 @@ You can send post request to the API with the template below with the actual bui
 ## Tests
 You can run tests by command below:
 ```bash
-cd {PATH TO THE PROJECT}
 pytest
 ```
