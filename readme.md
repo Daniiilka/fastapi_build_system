@@ -1,27 +1,32 @@
-# Share styles
+# Build-system
 
-The share_styles module allows the user to distribute new styles across existing studios
+A FastAPI system that automates and accelerates the routine processes of building applications
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Streamlit library.
+To setup environment and install package dependencies run setup.sh
 
 ```bash
-pip install streamlit
+./setup.sh
 ```
 
 ## Usage
 
-You can run streamlit script with a few ways:
-```python
-# run script with no arguments
-streamlit run share_styles.py
-
-# run script with --path argument
-streamlit run share_styles.py --  --path PATH_TO_PROJECT
-
-# for example 
-streamlit run share_styles.py --  --path /home/daniil/work/server_paint_calibration/
+You can run FastAPI app manually by this command:
+```bash
+cd {PATH TO THE PROJECT}
+# startapp
+uvicorn main:app --reload --port 5000
 ```
-If we run script with no argument we ask user for path to the project via streamlit text_input
+Or you can start tmux session by the command below:
+```bash
+./tmux-build-system.sh
+```
+For tmux startapp you should edit ./tmux-build-system.sh with the path for the project directory first
 
+## Tests
+You can run tests by command below:
+```bash
+cd {PATH TO THE PROJECT}
+pytest
+```
