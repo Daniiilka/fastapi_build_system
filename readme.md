@@ -14,7 +14,6 @@ bash setup.sh
 
 You can run FastAPI app manually by this command, It will start the application on the 5000 port:
 ```bash
-# startapp
 bash start.sh
 ```
 
@@ -28,5 +27,7 @@ You can send post request to /get_tasks route of the API with the template below
 ## Tests
 You can run tests by command below:
 ```bash
+source venv/bin/activate
+
 pytest
 ```

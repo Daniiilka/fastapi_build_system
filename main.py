@@ -18,4 +18,3 @@ async def read_item(request: BuildName) -> List:
     result = task_manager.get_tasks_for_build(request.build)
     return result
 
-# todo readme
