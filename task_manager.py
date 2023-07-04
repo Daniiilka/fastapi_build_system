@@ -46,9 +46,9 @@ class TaskManager:
         for task in tasks_queue:
             if len(processed_tasks) > 0:
                 self._unzip_tasks(processed_tasks[task], task, result_tasks=result_tasks)
-            else:
+            elif task not in result_tasks:
                 result_tasks.append(task)
-        if father_task:
+        if father_task and father_task not in result_tasks:
             result_tasks.append(father_task)
         return result_tasks
 
