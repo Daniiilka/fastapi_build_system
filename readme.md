@@ -7,26 +7,27 @@ A FastAPI system that automates and accelerates the routine processes of buildin
 To setup environment and install package dependencies run setup.sh
 
 ```bash
-./setup.sh
+bash setup.sh
 ```
 
 ## Usage
 
-You can run FastAPI app manually by this command:
+You can run FastAPI app manually by this command, It will start the application on the 5000 port:
 ```bash
-cd {PATH TO THE PROJECT}
-# startapp
-uvicorn main:app --reload --port 5000
+bash start.sh
 ```
-Or you can start tmux session by the command below:
-```bash
-./tmux-build-system.sh
+
+You can send post request to /get_tasks route of the API with the template below with the actual build name instead of example data "any_build_name":
+```json
+{
+    "build": "any_build_name"
+}
 ```
-For tmux startapp you should edit ./tmux-build-system.sh with the path for the project directory first
 
 ## Tests
 You can run tests by command below:
 ```bash
-cd {PATH TO THE PROJECT}
+source venv/bin/activate
+
 pytest
 ```

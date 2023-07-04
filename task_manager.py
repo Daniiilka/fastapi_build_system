@@ -9,6 +9,7 @@ class TaskManager:
         self._builds_file = builds_file
         self._all_tasks = None
         self._build_tasks = None
+        self._read_configs()
 
     def _read_configs(self) -> None:
         """
@@ -68,7 +69,5 @@ class TaskManager:
         :param build_name: name of build from user request
         :return: list with processed tasks
         """
-
-        self._read_configs()
         tasks_for_build = self._get_tasks_for_build(build_name)
         return self._unzip_tasks(tasks_for_build)
